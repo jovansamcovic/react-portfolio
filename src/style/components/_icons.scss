@@ -1,0 +1,35 @@
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-size: contain;
+
+  &.home {
+    background-image: url('./../../assets/home.svg');
+  }
+
+  &.about {
+    background-image: url('./../../assets/about.svg');
+  }
+
+  &.skills {
+    background-image: url('./../../assets/skills.svg');
+  }
+
+  &.services {
+    background-image: url('./../../assets/services.svg');
+  }
+
+  &.portfolio {
+    background-image: url('./../../assets/portfolio.svg');
+  }
+
+  &.contact {
+    background-image: url('./../../assets/contact.svg');
+  }
+
+  &.hand {
+    background-image: url('./../../assets/waving-hand.svg');
+  }
+}
