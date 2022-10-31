@@ -1,0 +1,89 @@
+html {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #fbfafb;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7A7A7A;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7A7A7A;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.main {
+  flex: 1 auto;
+}
+
+.container {
+  width: auto;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+
+  &__logo {
+    width: 200px;
+    height: 200px;
+    background-color: #b4b4b4;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    border: 5px solid #b4b4b4;
+    background-image: url('./../../assets/logo.png');
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__name {
+    font-size: 30px;
+  }
+}
