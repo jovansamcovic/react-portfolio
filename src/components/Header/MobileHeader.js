@@ -22,35 +22,35 @@ const MobileHeader = () => {
      <button className="mobile-header__close" onClick={toggleHeader}></button>
 
           <button className='mobile-header__btn'>
-            <i className="icon home"></i>
+            <i className="icon icon-home"></i>
             <span>Home</span>
           </button>
 
           <button className='mobile-header__btn'>
-            <i className="icon about"></i>
+            <i className="icon icon-about"></i>
             <span>About</span>
           </button>
 
 
          <button className='mobile-header__btn'>
-            <i className="icon skills"></i>
+            <i className="icon icon-skills"></i>
             <span>Skills</span>
           </button>
 
 
          <button className='mobile-header__btn'>
-            <i className="icon services"></i>
+            <i className="icon icon-services"></i>
             <span>Services</span>
           </button>
 
 
         <button className='mobile-header__btn'>
-          <i className="icon portfolio"></i>
+          <i className="icon icon-portfolio"></i>
             <span>Portfolio</span>
          </button>
 
          <button className='mobile-header__btn'>
-            <i className="icon contact"></i>
+            <i className="icon icon-contact"></i>
             <span>Contact</span>
           </button>
 
