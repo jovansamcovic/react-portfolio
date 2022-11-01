@@ -5,31 +5,31 @@
   background-position: center;
   background-size: contain;
 
-  &.home {
+  &.icon-home {
     background-image: url('./../../assets/home.svg');
   }
 
-  &.about {
+  &.icon-about {
     background-image: url('./../../assets/about.svg');
   }
 
-  &.skills {
+  &.icon-skills {
     background-image: url('./../../assets/skills.svg');
   }
 
-  &.services {
+  &.icon-services {
     background-image: url('./../../assets/services.svg');
   }
 
-  &.portfolio {
+  &.icon-portfolio {
     background-image: url('./../../assets/portfolio.svg');
   }
 
-  &.contact {
+  &.icon-contact {
     background-image: url('./../../assets/contact.svg');
   }
 
-  &.hand {
+  &.icon-hand {
     background-image: url('./../../assets/waving-hand.svg');
   }
 }
