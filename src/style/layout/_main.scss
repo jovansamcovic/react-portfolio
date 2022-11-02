@@ -14,7 +14,7 @@
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
       border: 5px solid #b4b4b4;
       background-image: url('./../../assets/logo.png');
-      background-size: 160px;
+      background-size: contain;
       background-position: center;
     }
   }
@@ -48,15 +48,22 @@
   position: absolute;
   top: 90px;
 
+
   &__li {
+
+    & + & {
+      margin-top: 15px;
+    }
+
+  }
+
+  &__a {
+    display: inline-block;
     width: 20px;
     height: 20px;
     background-size: contain;
     background-position: center;
 
-    & + & {
-      margin-top: 15px;
-    }
 
     &.instagram {
       background-image: url('./../../assets/instagram.svg');
@@ -371,5 +378,36 @@
     margin-top: 5px;
     color: #8d8b8d;
     margin-left: 10px;
+  }
+}
+
+.contact {
+  padding: 15px;
+  font-weight: 500;
+  color: #3a3637;
+
+  &__msg {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__value {
+    margin-top: 5px;
+  }
+
+  &__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background-color: #fff;
+    border: 1px solid #eeedee;
+
+    & + & {
+      margin-top: 15px;
+    }
   }
 }
