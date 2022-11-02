@@ -1,8 +1,17 @@
 import './App.scss';
 import './style/style.scss';
 import MobileHeader from './components/Header/MobileHeader';
+import { useEffect, useState } from 'react';
+import QualificationMenu from './components/QualificationMenu/QualificationMenu';
 
 function App() {
+
+  const [activeItem, setActiveItem] = useState("Education");
+
+  const QualificationMenuHandler = (value) => {
+    setActiveItem(value);
+  }
+
 
   return (
     <div className="App">
@@ -25,8 +34,10 @@ function App() {
             <p className='profile__about'>I'm creative frontend developer based in Kragujevac, Serbia, and I'm very passionate and dedicated to my work.</p>
         </div>
 
-        <h3 className='section-title'>About</h3>
-        <h4 className='section-subtitle'>My introduction</h4>
+        <div className='section'>
+          <h3 className='section__title'>About</h3>
+          <h4 className='section__subtitle'>My introduction</h4>
+        </div>
 
         <div className='about'>
           <div className='about__img'>
@@ -44,7 +55,7 @@ function App() {
                 <div className='box'>
                   <span className='box__icon job'></span>
                   <strong className='box__title'>Projects</strong>
-                  <span className='box__subtitle'>5+ projects</span>
+                  <span className='box__subtitle'>30+ projects</span>
                 </div>
 
                 <div className='box'>
@@ -64,11 +75,12 @@ function App() {
           </div>
         </div>
 
+        <div className='section'>
+          <h3 className='section__title'>Skills</h3>
+          <h4 className='section__subtitle'>My technical level</h4>
+        </div>
 
         <div className='skills'>
-
-        <h3 className='section-title'>Skills</h3>
-        <h4 className='section-subtitle'>My technical level</h4>
 
            <div className='skills__list'>
 
@@ -100,37 +112,68 @@ function App() {
            </div>
         </div>
 
+        <div className='section'>
+        <h3 className='section__title'>Qualification</h3>
+        <h4 className='section__subtitle'>My personal journey</h4>
+        </div>
+
         <div className='qualification'>
-        <h3 className='section-title'>Qualification</h3>
-        <h4 className='section-subtitle'>My personel journey</h4>
 
-        <ul className='qualification-menu'>
+        <QualificationMenu selectedItem={QualificationMenuHandler}/>
 
-          <li className='qualification-menu__item'>
-            <a href='https://www.facebook.com/'>Education</a>
-          </li>
+        {activeItem == "Education" &&
+          <div className='timeline'>
+            <div className='timeline-container left'>
+                <div className='timeline-content'>
+                  <strong className='timeline-title'> Faculty of Science, University of Kragujevac</strong>
+                  <span className='timline-subtitle'>Computer Science</span>
+                  <div className='timeline-calendar'>
+                    <i className='timeline-calendar__icon'></i>
+                    <span className='timeline-calendar__value'>2015 - 2021</span>
+                  </div>
+                </div>
+            </div>
 
-          <li className='qualification-menu__item'>
-          <a href='https://www.facebook.com/'>Experience</a>
-          </li>
-        </ul>
+            <div className='timeline-container right'>
+                <div className='timeline-content'>
+                  <strong className='timeline-title'>Medical school with student dormitory  "Sestre Ninkovic"</strong>
+                  <span className='timline-subtitle'>Lab technician</span>
+                  <div className='timeline-calendar'>
+                    <i className='timeline-calendar__icon'></i>
+                    <span className='timeline-calendar__value'>2011 - 2015</span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        }
 
-       <div className='timeline'>
-          <div className='timeline-container left'>
-              <div className='timeline-content'>
-              </div>
-          </div>
 
-          <div className='timeline-container right'>
-              <div className='timeline-content'>
-              </div>
-          </div>
+        {activeItem == "Experience" &&
+          <div className='timeline'>
+            <div className='timeline-container left'>
+                <div className='timeline-content'>
+                  <strong className='timeline-title'>Logispin RS</strong>
+                  <span className='timline-subtitle'>Frontend Developer</span>
+                  <div className='timeline-calendar'>
+                    <i className='timeline-calendar__icon'></i>
+                    <span className='timeline-calendar__value'>2020 - present</span>
+                  </div>
+                </div>
+            </div>
 
-          <div className='timeline-container left'>
-              <div className='timeline-content'>
-              </div>
-          </div>
-       </div>
+            <div className='timeline-container right'>
+                <div className='timeline-content'>
+                  <strong className='timeline-title'>Logispin RS</strong>
+                  <span className='timline-subtitle'>Internship</span>
+                  <div className='timeline-calendar'>
+                    <i className='timeline-calendar__icon'></i>
+                    <span className='timeline-calendar__value'>July 2020</span>
+                  </div>
+                </div>
+            </div>
+        </div>
+        }
+
 
         </div>
 
