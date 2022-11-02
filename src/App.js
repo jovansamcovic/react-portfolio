@@ -1,25 +1,44 @@
 import "./App.scss";
 import "./style/style.scss";
 import MobileHeader from "./components/Header/MobileHeader";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import QualificationMenu from "./components/QualificationMenu/QualificationMenu";
 import Footer from "./components/Footer/Footer";
 
 function App() {
     const [activeItem, setActiveItem] = useState("Education");
 
+    const home = useRef(null);
+    const about = useRef(null);
+    const skills = useRef(null);
+    const qualification = useRef(null);
+    const contact = useRef(null);
+
     const QualificationMenuHandler = (value) => {
         setActiveItem(value);
     };
 
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth'
+        })
+    }
+
     return (
         <div className="App">
             <header>
-                <MobileHeader />
+                <MobileHeader
+                    toHome={() => scrollToSection(home)}
+                    toAbout={() => scrollToSection(about)}
+                    toSkills={() => scrollToSection(skills)}
+                    toQualification={() => scrollToSection(qualification)}
+                    toContact={() => scrollToSection(contact)}
+                />
             </header>
 
             <main className="main">
-                <div className="profile">
+                <div className="profile" ref={home}>
                     <ul className="social-media">
                         <li className="social-media__li">
                           <a className="social-media__a instagram" href="https://www.instagram.com/j.samcovic/"> </a>
@@ -46,7 +65,7 @@ function App() {
                     <h4 className="section__subtitle">My introduction</h4>
                 </div>
 
-                <div className="about">
+                <div className="about" ref={about}>
                     <div className="about__img">
                         <div className="about__img-icon"></div>
                     </div>
@@ -85,7 +104,7 @@ function App() {
                     <h4 className="section__subtitle">My technical level</h4>
                 </div>
 
-                <div className="skills">
+                <div className="skills" ref={skills}>
                     <div className="skills__list">
                         <div className="skill">
                             <span className="skill__icon"></span>
@@ -118,7 +137,7 @@ function App() {
                     <h4 className="section__subtitle">My personal journey</h4>
                 </div>
 
-                <div className="qualification">
+                <div className="qualification" ref={qualification}>
                     <QualificationMenu selectedItem={QualificationMenuHandler} />
 
                     {activeItem === "Education" && (
@@ -179,7 +198,7 @@ function App() {
                     <h4 className="section__subtitle">Get in touch</h4>
                 </div>
 
-                <div className="contact">
+                <div className="contact" ref={contact}>
 
                     <div className="contact__box">
                         <i className="icon icon-email"></i>

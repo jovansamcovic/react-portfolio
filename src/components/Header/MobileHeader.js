@@ -1,12 +1,39 @@
 import './Header.scss';
 import { useState } from 'react';
 
-const MobileHeader = () => {
+const MobileHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
   const toggleHeader = () => {
     setIsOpen(!isOpen);
+  }
+
+  const toHomeHandler = () => {
+    setIsOpen(false);
+    toHome();
+  }
+
+
+  const toAboutHandler = () => {
+    setIsOpen(false);
+    toAbout();
+  }
+
+  const toSkillsHandler = () => {
+    setIsOpen(false);
+    toSkills();
+  }
+
+  const toQualificationHandler = () => {
+    setIsOpen(false);
+    toQualification();
+  }
+
+  const toContactHandler = () => {
+    setIsOpen(false);
+    toContact();
   }
 
   return (
@@ -21,35 +48,35 @@ const MobileHeader = () => {
 
      <button className="mobile-header__close" onClick={toggleHeader}></button>
 
-          <button className='mobile-header__btn'>
+          <button className='mobile-header__btn' onClick={toHomeHandler}>
             <i className="icon icon-home"></i>
             <span>Home</span>
           </button>
 
-          <button className='mobile-header__btn'>
+          <button className='mobile-header__btn' onClick={toAboutHandler}>
             <i className="icon icon-about"></i>
             <span>About</span>
           </button>
 
 
-         <button className='mobile-header__btn'>
+         <button className='mobile-header__btn' onClick={toSkillsHandler}>
             <i className="icon icon-skills"></i>
             <span>Skills</span>
           </button>
 
 
-         <button className='mobile-header__btn'>
+         <button className='mobile-header__btn' onClick={toHomeHandler}>
             <i className="icon icon-services"></i>
             <span>Services</span>
           </button>
 
 
-        <button className='mobile-header__btn'>
+        <button className='mobile-header__btn' onClick={toQualificationHandler}>
           <i className="icon icon-portfolio"></i>
-            <span>Portfolio</span>
+            <span>Qualification</span>
          </button>
 
-         <button className='mobile-header__btn'>
+         <button className='mobile-header__btn' onClick={toContactHandler}>
             <i className="icon icon-contact"></i>
             <span>Contact</span>
           </button>
