@@ -1,6 +1,6 @@
 
 .profile {
-  padding: 50px 20px;
+  padding: 45px 15px 15px 15px;
 
   &__logo {
     width: 100%;
@@ -36,7 +36,7 @@
       position: absolute;
       width: 50px;
       height: 2px;
-      background-color: #b1b1b1;
+      background-color: #fadf4c;
       top: 50%;
       transform: translateY(-50%);
       left: -60px;
@@ -73,20 +73,46 @@
 }
 
 
-.section-title {
+.section {
   width: 100%;
-  text-align: center;
-  font-size: 30px;
-  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+
+  &__title {
+    width: fit-content;
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      bottom: 0;
+      background-color: #fadf4c;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    color: #8d8b8d;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+  }
 }
 
-.section-subtitle {
-  margin-top: 10px;
-  color: #8d8b8d;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 500;
-}
+
+
 
 .about {
   padding: 15px;
@@ -100,10 +126,9 @@
 
   &__cv {
     margin-top: 20px;
-    width: 200px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: red;
+    width: 160px;
+    height: 36px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +138,6 @@
   }
 
   &__img {
-    margin-top: 40px;
     display: flex;
     justify-content: center;
 
@@ -128,7 +152,7 @@
 
   &__description {
     margin-top: 30px;
-    text-align: center;
+    text-align: justify;
   }
 }
 
@@ -187,11 +211,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 50px 20px;
+  padding: 15px;
 
   &__list {
     width: 100%;
-    margin-top: 20px;
     padding: 30px 15px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -232,13 +255,41 @@
   }
 }
 
+.qualification {
+  padding: 15px 30px;
+}
+
 .qualification-menu {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 20px;
+
 
   &__item {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+
+    &.active {
+      &::before {
+        visibility: visible;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #fadf4c;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      visibility: hidden;
+    }
+
+
     & + & {
       margin-left: 30px;
     }
@@ -254,60 +305,46 @@
 
 .timeline {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 30px 0;
 
   &::before {
     content: "";
     position: absolute;
     width: 2px;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #757475;
+    height: calc(100% - 100px);
+    left: 0;
+    background-color: #6e6c6d;
+  }
+
+  &-subtitile {
+    display: inline-block;
+    margin-top: 5px;
   }
 
   &-container {
-    width: 50%;
+    width: 100%;
     height: 100px;
-    padding: 20px 40px 20px 40px;
+    padding: 0 20px 0 40px;
     position: relative;
 
-    &.left {
-      left: 0;
-    }
-
-    &.right {
-      left: 50%;
-
-      &::before {
-        left: -8px;
-      }
-
-      &::after {
-        left: 0;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 2px;
-      background-color: #757475;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
+    & + & {
+      margin-top: 20px;
     }
 
     &::before {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 14px;
+      height: 14px;
       border-radius: 50%;
-      background-color: #ffffff;
-      right: -8px;
-      top: 42px;
-      border: 5px solid red;
+      // background-color: #757475;
+      background-color: #fadf4c;
+      border: 3px solid #323232;
+      left: -6px;
+      top: 0;
       box-sizing: border-box;
     }
   }
@@ -315,6 +352,24 @@
   &-content {
     width: 100%;
     height: 100%;
-    background-color: #757475;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.timeline-calendar {
+  &__icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('./../../assets/calendar.svg');
+    background-size: contain;
+  }
+
+  &__value {
+    display: inline-block;
+    margin-top: 5px;
+    color: #8d8b8d;
+    margin-left: 10px;
   }
 }
