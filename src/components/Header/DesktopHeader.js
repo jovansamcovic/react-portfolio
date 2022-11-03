@@ -10,6 +10,7 @@ const DesktopHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) 
     <ul className="desktop-header">
         {items.map((item) => (
           <DesktopHeaderItem
+            key={Math.random()}
             name={item}
             activeItem={activeItem}
             setActiveItem={setActiveItem}
