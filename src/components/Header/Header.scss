@@ -7,6 +7,10 @@
   font-family: 'Open Sans', sans-serif;
   z-index: 999;
 
+  @media (min-width: 1020px) {
+    display: none;
+  }
+
   &__btn {
     all: unset;
     display: flex;
@@ -72,6 +76,41 @@
 
     &.active {
       bottom: 0;
+    }
+  }
+}
+
+.desktop-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+
+  @media (max-width: 1019px) {
+    display: none;
+  }
+
+  &__item {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    position: relative;
+
+
+    &.active {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: #fadf4c;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -5px;
+      }
+    }
+
+    & + & {
+      margin-left: 50px;
     }
   }
 }

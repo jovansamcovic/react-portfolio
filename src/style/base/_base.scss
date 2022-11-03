@@ -50,18 +50,20 @@ div {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow-x: hidden;
+  @media (max-width: 1019px) {
+    padding-bottom: 42px;
+  }
 }
 
 .main {
   flex: 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
-  width: auto;
+  width: 100%;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -73,7 +75,7 @@ ul {
   box-sizing: border-box;
 }
 
-li {
+li, p {
   margin: 0;
   padding: 0;
 }
