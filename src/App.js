@@ -12,8 +12,9 @@ function App() {
     const home = useRef(null);
     const about = useRef(null);
     const skills = useRef(null);
-    const qualification = useRef(null);
+    const qualifications = useRef(null);
     const contact = useRef(null);
+    const projects = useRef(null);
 
     const QualificationMenuHandler = (value) => {
         setActiveItem(value);
@@ -28,27 +29,27 @@ function App() {
 
     return (
         <div className="app" ref={home}>
+            <div className="container">
             <header>
-                <div className="container">
                     <MobileHeader
                         toHome={() => scrollToSection(home)}
                         toAbout={() => scrollToSection(about)}
                         toSkills={() => scrollToSection(skills)}
-                        toQualification={() => scrollToSection(qualification)}
+                        toQualifications={() => scrollToSection(qualifications)}
                         toContact={() => scrollToSection(contact)}
+                        toProjects={() => scrollToSection(projects)}
                     />
 
                     <DesktopHeader
                         toHome={() => scrollToSection(home)}
                         toAbout={() => scrollToSection(about)}
                         toSkills={() => scrollToSection(skills)}
-                        toQualification={() => scrollToSection(qualification)}
+                        toQualifications={() => scrollToSection(qualifications)}
                         toContact={() => scrollToSection(contact)}
+                        toProjects={() => scrollToSection(projects)}
                     />
-                </div>
             </header>
 
-            <div className="container">
                 <main className="main">
                     <div className="profile">
                         <div className="scroll">
@@ -58,17 +59,17 @@ function App() {
 
                         <ul className="social-media">
                             <li className="social-media__li">
-                                <a className="social-media__a instagram" href="https://www.instagram.com/j.samcovic/">
+                                <a className="social-media__a instagram" target="_blank" rel="noreferrer" href="https://www.instagram.com/j.samcovic/">
                                     {" "}
                                 </a>
                             </li>
                             <li className="social-media__li">
-                                <a className="social-media__a linkedin" href="https://www.linkedin.com/in/jovan-sam%C4%8Dovi%C4%87-753b1b151/">
+                                <a className="social-media__a linkedin" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jovan-sam%C4%8Dovi%C4%87-753b1b151/">
                                     {" "}
                                 </a>
                             </li>
                             <li className="social-media__li">
-                                <a className="social-media__a github" href="https://github.com/jovansamcovic">
+                                <a className="social-media__a github" target="_blank" rel="noreferrer" href="https://github.com/jovansamcovic">
                                     {" "}
                                 </a>
                             </li>
@@ -157,7 +158,7 @@ function App() {
                         </div>
                     </div>
 
-                    <div className="qualification" ref={qualification}>
+                    <div className="qualification" ref={qualifications}>
                         <div className="section">
                             <h3 className="section__title">Qualification</h3>
                             <h4 className="section__subtitle">My personal journey</h4>
@@ -218,6 +219,30 @@ function App() {
                         )}
                     </div>
 
+
+                    <div className="projects" ref={projects}>
+                    <div className="section">
+                            <h3 className="section__title">Projects</h3>
+                            <h4 className="section__subtitle">My personal projects</h4>
+                        </div>
+
+                        <div className="projects__list">
+                        <div className="project">
+                            <div className="project__img star-wars"></div>
+                            <strong className="project__name">Star Wars</strong>
+                            <ul className="project-menu">
+                                <li className="project-menu__item">
+                                    <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://star-wars-7dbd0.web.app/">Demo</a>
+                                </li>
+                                <li className="project-menu__item">
+                                    <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://github.com/jovansamcovic/react-app-star-wars">Github</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+
                     <div className="contact" ref={contact}>
                         <div className="section">
                             <h3 className="section__title">Contact Me</h3>
@@ -247,9 +272,9 @@ function App() {
                         </div>
                     </div>
                 </main>
-            </div>
 
             <Footer />
+            </div>
         </div>
     );
 }

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import DesktopHeaderItem from "./DesktopHeaderItem";
 
-const DesktopHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) => {
+const DesktopHeader = ({toHome, toAbout, toSkills, toQualifications, toContact,toProjects}) => {
 
-  const items = ["Home", "About","Skills","Qualification","Contact"];
+  const items = ["Home", "About","Skills","Qualifications","Projects","Contact"];
   const [activeItem, setActiveItem] = useState("Home");
 
   return (
@@ -18,8 +18,9 @@ const DesktopHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) 
             toHome={toHome}
             toAbout={toAbout}
             toSkills={toSkills}
-            toQualification={toQualification}
+            toQualifications={toQualifications}
             toContact={toContact}
+            toProjects={toProjects}
           />
         ))
 
