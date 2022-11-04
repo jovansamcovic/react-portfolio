@@ -50,6 +50,7 @@
 
   &__info {
     @media (min-width: 1020px) {
+      padding: 20px;
       width: 800px;
       height: 400px;
       order: 1;
@@ -116,11 +117,18 @@
 
   &__a {
     display: inline-block;
-    width: 20px;
-    height: 20px;
     background-size: contain;
     background-position: center;
 
+    @media (max-width: 1019px) {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: 1020px) {
+      width: 25px;
+      height: 25px;
+    }
 
     &.instagram {
       background-image: url('./../../assets/instagram.svg');
@@ -654,10 +662,10 @@
     &::after {
       content: "";
       position: absolute;
-      width: 15px;
-      height: 15px;;
-      background-image: url('./../../assets/down-arrow.png');
-      background-size: 15px;
+      width: 20px;
+      height: 20px;;
+      background-image: url('./../../assets/down-arrow.svg');
+      background-size: 20px;
       right: -20px;
       top: 50%;
       transform: translateY(-50%);
@@ -682,5 +690,87 @@
       transition: all .2s;
       animation: move linear 2s infinite;
     }
+  }
+}
+
+.projects {
+  width: 100%;
+
+  &__list {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.project {
+  padding: 20px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) and (max-width: 1019px) {
+    width: 30%;
+  }
+
+  @media (min-width: 1020px) {
+    width: 20%;
+  }
+
+
+  &__img {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+
+    &.star-wars {
+      background-image: url('./../../assets/star-wars.svg');
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.project-menu {
+  margin-top: 15px;
+  display: flex;
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid #8d8b8d;
+
+    & + & {
+      margin-left: 10px;
+    }
+  }
+
+  &__a {
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
   }
 }

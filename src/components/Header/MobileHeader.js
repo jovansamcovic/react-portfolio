@@ -1,7 +1,7 @@
 import './Header.scss';
 import { useState } from 'react';
 
-const MobileHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) => {
+const MobileHeader = ({toHome, toAbout, toSkills, toQualifications, toContact, toProjects}) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,12 +28,17 @@ const MobileHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) =
 
   const toQualificationHandler = () => {
     setIsOpen(false);
-    toQualification();
+    toQualifications();
   }
 
   const toContactHandler = () => {
     setIsOpen(false);
     toContact();
+  }
+
+  const toProjectshandler = () => {
+    setIsOpen(false);
+    toProjects();
   }
 
   return (
@@ -65,15 +70,15 @@ const MobileHeader = ({toHome, toAbout, toSkills, toQualification, toContact}) =
           </button>
 
 
-         <button className='mobile-header__btn' onClick={toHomeHandler}>
-            <i className="icon icon-services"></i>
-            <span>Services</span>
+         <button className='mobile-header__btn' onClick={toProjectshandler}>
+            <i className="icon icon-projects"></i>
+            <span>Projects</span>
           </button>
 
 
         <button className='mobile-header__btn' onClick={toQualificationHandler}>
           <i className="icon icon-portfolio"></i>
-            <span>Qualification</span>
+            <span>Qualifications</span>
          </button>
 
          <button className='mobile-header__btn' onClick={toContactHandler}>

@@ -24,6 +24,10 @@ const DesktopHeaderItem = (props) => {
     if (props.name === "Contact") {
       props.toContact();
     }
+
+    if (props.name === "Projects") {
+      props.toProjects();
+    }
   }
 
   return (
