@@ -30,7 +30,7 @@ function App() {
     return (
         <div className="app" ref={home}>
             <div className="container">
-            <header>
+                <header>
                     <MobileHeader
                         toHome={() => scrollToSection(home)}
                         toAbout={() => scrollToSection(about)}
@@ -48,7 +48,7 @@ function App() {
                         toContact={() => scrollToSection(contact)}
                         toProjects={() => scrollToSection(projects)}
                     />
-            </header>
+                </header>
 
                 <main className="main">
                     <div className="profile">
@@ -119,12 +119,26 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="about__description">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure est vel voluptatibus sed sequi fugit, architecto perspiciatis! Beatae, doloribus! Numquam nobis quia ipsam sequi animi veniam ratione nam eos
-                                    consequatur!
+                                    The company where I currently work splits the frontend part into two teams.
+                                    Template team  React team. My task as a member of the template team is to create a
+                                    template that will later be used by the react team. One template consists of HTML + CSS.
+                                    This division is necessary due to the complexity of the company's projects, which are primarily
+                                    bookmaking sites. In addition to bookmaking sites, I have experience in creating templates for
+                                    internal dashboard-type projects. The template team is in charge of maintaining over 80 projects
+                                    of different types. Desktop adaptive, Mobile adaptive, Responsive, Liquid...
+                                    For easier servicing of all projects, we use our internal vale framework.
+                                    The framework existed even before I joined the company, but today I actively
+                                    participate in its servicing and expansion. In addition to internal framework ,
+                                    we try to follow all modern trends in layout frontend development. We use SCSS, 7-1 architecture and apply BEM methodology in creating templates.
+                                    In the past few months I have been actively learning React and the plan is to cover the entire frontend part at some point.
+                                    I believe that I have learned a lot in a short time, and you can best judge the level of my knowledge of React by looking
+                                    at the section with my personal projects. If you have any additional questions, please contact me using one of
+                                    the communication channels that you can find on this site.
                                 </div>
-                                <a href="https://www.facebook.com/" className="about__cv">
+                                <a href="/JovanSamcovicCV.pdf" download="JovanSamcovicCV.pdf" className="about__cv">
                                     Download CV
                                 </a>
+                                <p className="message">Currently only the Serbian version</p>
                             </div>
                         </div>
                     </div>
@@ -221,24 +235,25 @@ function App() {
 
 
                     <div className="projects" ref={projects}>
-                    <div className="section">
+                        <div className="section">
                             <h3 className="section__title">Projects</h3>
                             <h4 className="section__subtitle">My personal projects</h4>
                         </div>
 
                         <div className="projects__list">
-                        <div className="project">
-                            <div className="project__img star-wars"></div>
-                            <strong className="project__name">Star Wars</strong>
-                            <ul className="project-menu">
-                                <li className="project-menu__item">
-                                    <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://star-wars-7dbd0.web.app/">Demo</a>
-                                </li>
-                                <li className="project-menu__item">
-                                    <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://github.com/jovansamcovic/react-app-star-wars">Github</a>
-                                </li>
-                            </ul>
-                        </div>
+                            <div className="project">
+                                <div className="project__img star-wars"></div>
+                                <strong className="project__name">Star Wars</strong>
+                                <strong className="project__type desktop">Desktop</strong>
+                                <ul className="project-menu">
+                                    <li className="project-menu__item">
+                                        <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://star-wars-7dbd0.web.app/">Demo</a>
+                                    </li>
+                                    <li className="project-menu__item">
+                                        <a className="project-menu__a" rel="noreferrer" target="_blank" href="https://github.com/jovansamcovic/react-app-star-wars">Github</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -273,7 +288,7 @@ function App() {
                     </div>
                 </main>
 
-            <Footer />
+                <Footer />
             </div>
         </div>
     );
