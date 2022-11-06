@@ -119,14 +119,14 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="about__description">
-                                    The company where I currently work splits the frontend part into two teams.
-                                    Template team  React team. My task as a member of the template team is to create a
-                                    template that will later be used by the react team. One template consists of HTML + CSS.
+                                    The company where I currently work splits the frontend part into two teams,
+                                    Template team and React team. My task as a member of the template team is to create a
+                                    templates that will later be used by the React team. One template consists of HTML + CSS.
                                     This division is necessary due to the complexity of the company's projects, which are primarily
                                     bookmaking sites. In addition to bookmaking sites, I have experience in creating templates for
                                     internal dashboard-type projects. The template team is in charge of maintaining over 80 projects
                                     of different types. Desktop adaptive, Mobile adaptive, Responsive, Liquid...
-                                    For easier servicing of all projects, we use our internal vale framework.
+                                    For easier servicing of all projects, we use our internal Wall-e framework.
                                     The framework existed even before I joined the company, but today I actively
                                     participate in its servicing and expansion. In addition to internal framework ,
                                     we try to follow all modern trends in layout frontend development. We use SCSS, 7-1 architecture and apply BEM methodology in creating templates.
