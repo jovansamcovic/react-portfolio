@@ -255,18 +255,18 @@
     justify-content: center;
 
     &-icon {
-      background-image: url('./../../assets/logo.png');
+      background-image: url('./../../assets/logo-about.JPG');
       background-size: contain;
       border-radius: 15px;
 
       @media (max-width: 1019px) {
         width: 200px;
-        height: 200px;
+        height: 300px;
       }
 
       @media (min-width: 1020px) {
-        width: 360px;
-        height: 360px;
+        width: 400px;
+        height: 600px;
       }
     }
   }
@@ -274,6 +274,7 @@
   &__description {
     margin-top: 30px;
     text-align: justify;
+    padding: 10px;
   }
 }
 
