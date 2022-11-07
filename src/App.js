@@ -7,7 +7,7 @@ import Footer from "./components/Footer/Footer";
 import DesktopHeader from "./components/Header/DesktopHeader";
 
 function App() {
-    const [activeItem, setActiveItem] = useState("Education");
+    const [activeItem, setActiveItem] = useState("Experience");
 
     const home = useRef(null);
     const about = useRef(null);
