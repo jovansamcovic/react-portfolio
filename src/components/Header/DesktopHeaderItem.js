@@ -17,8 +17,8 @@ const DesktopHeaderItem = (props) => {
       props.toSkills();
     }
 
-    if(props.name === "Qualification") {
-      props.toQualification();
+    if(props.name === "Qualifications") {
+      props.toQualifications();
     }
 
     if (props.name === "Contact") {
