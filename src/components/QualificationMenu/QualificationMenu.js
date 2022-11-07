@@ -4,7 +4,7 @@ import QualificationItem from "./QualificationItem";
 const QualificationMenu = ({selectedItem}) => {
 
   // const items = ["Education", "Experience"];
-  const [activeItem, setActiveItem] = useState("Education");
+  const [activeItem, setActiveItem] = useState("Experience");
 
   const ItemHandler =  (value) => {
     setActiveItem(value);
