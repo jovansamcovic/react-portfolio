@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import QualificationMenu from "./components/QualificationMenu/QualificationMenu";
 import Footer from "./components/Footer/Footer";
 import DesktopHeader from "./components/Header/DesktopHeader";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
     const [activeItem, setActiveItem] = useState("Experience");
@@ -51,6 +52,7 @@ function App() {
                 </header>
 
                 <main className="main">
+                    <ScrollToTop />
                     <div className="profile">
                         <div className="scroll">
                             <span className="scroll__icon"></span>
