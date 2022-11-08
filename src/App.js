@@ -187,6 +187,7 @@ function App() {
                                 <div className="timeline-container left">
                                     <div className="timeline-content">
                                         <strong className="timeline-title"> Faculty of Science, University of Kragujevac</strong>
+                                        <span className="timline-subtitle">Computer Science</span>
                                         <div className="timeline-calendar">
                                             <i className="timeline-calendar__icon"></i>
                                             <span className="timeline-calendar__value">2015 - 2021</span>
