@@ -1,0 +1,137 @@
+.about {
+  padding: 15px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: 75%;
+  }
+
+
+
+
+  &__wrap {
+    @media (min-width: 1020px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: 1020px) {
+      align-items: flex-start;
+      width: 480px;
+      padding: 30px;
+    }
+  }
+
+
+  &__cv {
+    margin-top: 20px;
+    width: 160px;
+    height: 36px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3a3637;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    &-icon {
+      background-image: url('./../../assets/logo-about.png');
+      background-size: contain;
+      border-radius: 15px;
+
+      @media (max-width: 1019px) {
+        width: 200px;
+        height: 300px;
+      }
+
+      @media (min-width: 1020px) {
+        width: 400px;
+        height: 600px;
+      }
+    }
+  }
+
+  &__description {
+    margin-top: 30px;
+    text-align: justify;
+    padding: 10px;
+  }
+}
+
+.boxes {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background-color: #fff;
+  border: 1px solid #eeedee;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 767px) {
+    width: 90px;
+    height: 90px;
+  }
+
+  @media (min-width: 1020px) {
+    width: 150px;
+    height: 150px;
+    font-size: 18px;
+  }
+
+  &+& {
+    margin-left: 10px;
+  }
+
+  &__title {
+    margin-top: 5px;
+    color: #3a3637;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 500;
+    color: #6e6c6d;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+
+    &.experience {
+      background-image: url('./../../assets/experience.svg');
+    }
+
+    &.job {
+      background-image: url('./../../assets/job.svg');
+    }
+
+    &.customerservice {
+      background-image: url('./../../assets/customerservice.svg');
+    }
+  }
+}
