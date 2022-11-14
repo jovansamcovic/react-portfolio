@@ -13,7 +13,7 @@ const Qualification = (props) => {
   return (
     <div className="qualification" ref={props.qualifications}>
     <div className="section">
-        <h3 className="section__title">Qualification</h3>
+        <h3 className="section__title">Qualifications</h3>
         <h4 className="section__subtitle">My personal journey</h4>
     </div>
 
