@@ -46,6 +46,11 @@
     text-decoration: none;
     color: #fff;
     background-color: #3a3637;
+    transition: all .3s;
+
+    &:active {
+      transform: scale(0.8);
+    }
   }
 
   &__img {
